@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Gallery | S.K. Electronics & Repairing Centre</title>
+  
+  <meta name="description" content="View S.K. Electronics' portfolio of real repair works, including refrigerator compressor swaps, AC chemical washing, and commercial bakery oven troubleshooting.">
+  <link rel="canonical" href="https://skelectronicsnepal.com/gallery.html">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#D62828">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar">
+    <div id="scroll-indicator" class="scroll-progress-indicator"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header id="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <i data-lucide="wrench"></i>
+        </div>
+        <div class="logo-text">
+          <h2>S.K. <span>Electronics</span></h2>
+          <p>Repairing Centre</p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        
+        <!-- Services with Mega Menu -->
+        <div class="dropdown-parent">
+          <a href="services.html" class="nav-link" style="display:flex; align-items:center; gap:4px;">
+            Services <i data-lucide="chevron-down" style="width:14px; height:14px;"></i>
+          </a>
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h4>Home Appliances</h4>
+              <ul class="mega-list">
+                <li><a href="services.html?service=Air%20Conditioner%20Repair">AC Repair & Refill</a></li>
+                <li><a href="services.html?service=Refrigerator%20Repair">Refrigerator Fixes</a></li>
+                <li><a href="services.html?service=Washing%20Machine%20Repair">Washing Machines</a></li>
+                <li><a href="services.html?service=Microwave%20Oven%20Repair">Microwave Ovens</a></li>
+              </ul>
+            </div>
+            <div class="mega-column mega-column-secondary">
+              <h4>Commercial Kitchen</h4>
+              <ul class="mega-list">
+                <li><a href="services.html?service=Commercial%20Bakery%20Oven%20Repair">Bakery Deck Ovens</a></li>
+                <li><a href="services.html?service=Kitchen%20Equipment%20Repair">Commercial Fryers & Mixers</a></li>
+                <li><a href="services.html?service=Deep%20Freezer%20Repair">Deep Freezers & Chillers</a></li>
+                <li><a href="services.html?service=AMC">Annual Maintenance (AMC)</a></li>
+              </ul>
+            </div>
+            <div class="mega-promo">
+              <div>
+                <h5><i data-lucide="shield-check" style="color:var(--primary);"></i> Premium Service</h5>
+                <p>All repair works are backed by a standard 90 days service and parts replacement warranty.</p>
+              </div>
+              <a href="services.html" class="btn btn-primary btn-sm" style="margin-top:12px;">View All Services</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+        <a href="book.html" class="btn btn-primary" style="display:none; @media(min-width: 768px){display:inline-flex;}">Book Repair</a>
+        <button id="hamburger" class="hamburger" aria-label="Open Navigation Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav" class="mobile-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services Directory</a>
+      <a href="gallery.html" class="nav-link active">Gallery</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+      <a href="book.html" class="btn btn-primary" style="width:100%; text-align:center;">Book Repair Appointment</a>
+    </div>
+  </header>
+
+  <!-- Banner Header -->
+  <section class="section section-bg" style="padding-top:120px; padding-bottom:50px;">
+    <div class="container" style="text-align:center; display:flex; flex-direction:column; align-items:center; gap:12px;">
+      <span class="section-tag">Work Portfolio</span>
+      <h1 style="font-size:2.5rem; font-weight:900;">Our Workshop & Service Gallery</h1>
+      <p style="color:var(--text-secondary); max-width:600px; font-size:0.95rem;">Real photos showing our certified engineers diagnosing, fixing, and maintaining electronics in Lalitpur and Kathmandu.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Grid and Filtering -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      
+      <!-- Filters list -->
+      <div class="filter-tabs" style="max-width:650px; margin: -40px auto 50px auto; justify-content:center;">
+        <button class="filter-tab gallery-filter-btn active" data-category="All">All</button>
+        <button class="filter-tab gallery-filter-btn" data-category="Workshop">Workshop</button>
+        <button class="filter-tab gallery-filter-btn" data-category="Repair Work">Repair Work</button>
+        <button class="filter-tab gallery-filter-btn" data-category="Home Service">Home Service</button>
+        <button class="filter-tab gallery-filter-btn" data-category="Technicians">Technicians</button>
+        <button class="filter-tab gallery-filter-btn" data-category="Before After">Before After</button>
+      </div>
+
+      <!-- Masonry Gallery Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        
+        <!-- Item 1 -->
+        <div class="gallery-card" data-category="Home Service">
+          <div style="position:relative; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&auto=format&fit=crop&q=80" alt="AC Gas Refilling home service">
+            <span class="card-category" style="top:15px; right:15px;">Home Service</span>
+          </div>
+          <div class="gallery-info">
+            <h3>Split AC Gas Refilling</h3>
+            <p>Technician refilling refrigerant and testing pressures on splitting compressor in Jawalakhel.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-card" data-category="Workshop">
+          <div style="position:relative; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=600&auto=format&fit=crop&q=80" alt="LG Washing machine drum replacement">
+            <span class="card-category" style="top:15px; right:15px;">Workshop</span>
+          </div>
+          <div class="gallery-info">
+            <h3>Washing Machine Drum bearing</h3>
+            <p>Disassembled bearing assembly of front load LG washing machine at our Kupondol workshop.</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-card" data-category="Repair Work">
+          <div style="position:relative; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&auto=format&fit=crop&q=80" alt="Commercial bakery deck oven calibration">
+            <span class="card-category" style="top:15px; right:15px;">Repair Work</span>
+          </div>
+          <div class="gallery-info">
+            <h3>Commercial Bakery Oven Calibration</h3>
+            <p>Troubleshooting high-temperature thermostat relays on industrial deck oven in Pulchowk.</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-card" data-category="Repair Work">
+          <div style="position:relative; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop&q=80" alt="Refrigerator compressor upgrade">
+            <span class="card-category" style="top:15px; right:15px;">Repair Work</span>
+          </div>
+          <div class="gallery-info">
+            <h3>Refrigerator Compressor Upgrade</h3>
+            <p>Fitting new inverter compressor module and copper capillary tubes on Whirlpool double-door fridge.</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-card" data-category="Technicians">
+          <div style="position:relative; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80" alt="Testing electrical ground safety">
+            <span class="card-category" style="top:15px; right:15px;">Technicians</span>
+          </div>
+          <div class="gallery-info">
+            <h3>Safety Earth Ground Checks</h3>
+            <p>Certified senior engineer testing voltage insulation leakage to prevent household electric shocks.</p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-card" data-category="Before After">
+          <div style="position:relative; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1621905252507-b354bc25edac?w=600&auto=format&fit=crop&q=80" alt="AC condenser chemical wash before after">
+            <span class="card-category" style="top:15px; right:15px;">Before After</span>
+          </div>
+          <div class="gallery-info">
+            <h3>AC Condenser Coils Maintenance</h3>
+            <p>Cleaning high-pressure dust coating blockages to restore cooling efficiency (Before vs After wash).</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Real Verification strip -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="glass-card" style="display:flex; align-items:center; gap:20px; border-radius:24px; padding:24px; background-color:var(--bg-secondary); border-color:var(--border-color);">
+        <div class="logo-icon" style="background-color:rgba(16,185,129,0.1); color:#10B981; padding:12px; border-radius:12px;">
+          <i data-lucide="check-circle"></i>
+        </div>
+        <div>
+          <h4 style="font-size:1.05rem; font-weight:800; margin-bottom:4px;">Real Customer Work Verification</h4>
+          <p style="font-size:0.8rem; color:var(--text-secondary); line-height:1.5;">We take pictures of actual troubleshooting sessions with customer consent to document and maintain complete transparent work standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-column">
+          <a href="index.html" class="logo footer-logo">
+            <div class="logo-icon" style="background-color:#FFFFFF; color:#0F172A;">
+              <i data-lucide="wrench"></i>
+            </div>
+            <div class="logo-text">
+              <h2 style="color:#FFF;">S.K. <span style="background-color:rgba(255,255,255,0.1); color:#FFF;">Electronics</span></h2>
+              <p style="color:#64748B;">Repairing Centre</p>
+            </div>
+          </a>
+          <p class="footer-about">
+            Lalitpur's premier home appliance and commercial kitchen repair center. Over 10 years of trusted experience restoring comfort to your home and efficiency to your business.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services Directory</a></li>
+            <li><a href="gallery.html">Our Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact Support</h3>
+          <ul class="footer-contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+              <span>Kupondol Road,<br>Lalitpur 44700, Nepal</span>
+            </li>
+            <li>
+              <i data-lucide="phone"></i>
+              <div>
+                <a href="tel:9840705717" style="display:block; color:#FFF;">9840705717</a>
+                <a href="tel:9818597197" style="display:block; color:#FFF;">9818597197</a>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="mail"></i>
+              <a href="mailto:info@skelectronicsnepal.com">info@skelectronicsnepal.com</a>
+            </li>
+            <li>
+              <i data-lucide="clock"></i>
+              <span>Open: 8:00 AM - 8:00 PM<br>(Sunday - Saturday)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Our Location</h3>
+          <div class="footer-map-frame">
+            <iframe
+              title="Google Map location coordinates of Kupondole, Lalitpur"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.242784534726!2d85.3129525!3d27.6788874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1828cdbcaf63%3A0xc39cb4526d1af6f8!2sKupondole%2C%20Lalitpur!5e0!3m2!1sen!2snp!4v1719830000000!5m2!1sen!2snp"
+              width="100%"
+              height="100%"
+              style="border: 0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 S.K. Electronics & Repairing Centre. All Rights Reserved.</p>
+        <p>Developed & Maintained in Lalitpur, Nepal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTAs -->
+  <div class="floating-ctas">
+    <a href="tel:9840705717" class="floating-btn floating-call" aria-label="Call Direct Desk">
+      <i data-lucide="phone"></i>
+    </a>
+    <a href="https://wa.me/9840705717?text=Hi,%20I%20would%20like%20to%20book%20a%20repair%20service." target="_blank" rel="noopener noreferrer" class="floating-btn floating-whatsapp" aria-label="WhatsApp Support Chat">
+      <i data-lucide="message-square"></i>
+    </a>
+  </div>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Scroll to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <div id="offline-badge" class="offline-badge">
+    You are currently offline. Running on cached resources.
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

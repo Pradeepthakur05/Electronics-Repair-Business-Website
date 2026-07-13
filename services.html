@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Directory | S.K. Electronics & Repairing Centre</title>
+  
+  <meta name="description" content="Browse and search our 15 professional home and commercial electronic appliance repair services in Lalitpur and Kathmandu. Upfront quotes & certified technicians.">
+  <link rel="canonical" href="https://skelectronicsnepal.com/services.html">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#D62828">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar">
+    <div id="scroll-indicator" class="scroll-progress-indicator"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header id="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <i data-lucide="wrench"></i>
+        </div>
+        <div class="logo-text">
+          <h2>S.K. <span>Electronics</span></h2>
+          <p>Repairing Centre</p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        
+        <!-- Services with Mega Menu -->
+        <div class="dropdown-parent">
+          <a href="services.html" class="nav-link active" style="display:flex; align-items:center; gap:4px;">
+            Services <i data-lucide="chevron-down" style="width:14px; height:14px;"></i>
+          </a>
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h4>Home Appliances</h4>
+              <ul class="mega-list">
+                <li><a href="services.html?service=Air%20Conditioner%20Repair">AC Repair & Refill</a></li>
+                <li><a href="services.html?service=Refrigerator%20Repair">Refrigerator Fixes</a></li>
+                <li><a href="services.html?service=Washing%20Machine%20Repair">Washing Machines</a></li>
+                <li><a href="services.html?service=Microwave%20Oven%20Repair">Microwave Ovens</a></li>
+              </ul>
+            </div>
+            <div class="mega-column mega-column-secondary">
+              <h4>Commercial Kitchen</h4>
+              <ul class="mega-list">
+                <li><a href="services.html?service=Commercial%20Bakery%20Oven%20Repair">Bakery Deck Ovens</a></li>
+                <li><a href="services.html?service=Kitchen%20Equipment%20Repair">Commercial Fryers & Mixers</a></li>
+                <li><a href="services.html?service=Deep%20Freezer%20Repair">Deep Freezers & Chillers</a></li>
+                <li><a href="services.html?service=AMC">Annual Maintenance (AMC)</a></li>
+              </ul>
+            </div>
+            <div class="mega-promo">
+              <div>
+                <h5><i data-lucide="shield-check" style="color:var(--primary);"></i> Premium Service</h5>
+                <p>All repair works are backed by a standard 90 days service and parts replacement warranty.</p>
+              </div>
+              <a href="services.html" class="btn btn-primary btn-sm" style="margin-top:12px;">View All Services</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+        <a href="book.html" class="btn btn-primary" style="display:none; @media(min-width: 768px){display:inline-flex;}">Book Repair</a>
+        <button id="hamburger" class="hamburger" aria-label="Open Navigation Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav" class="mobile-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link active">Services Directory</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+      <a href="book.html" class="btn btn-primary" style="width:100%; text-align:center;">Book Repair Appointment</a>
+    </div>
+  </header>
+
+  <!-- Banner Header -->
+  <section class="section section-bg" style="padding-top:120px; padding-bottom:50px;">
+    <div class="container" style="text-align:center; display:flex; flex-direction:column; align-items:center; gap:12px;">
+      <span class="section-tag">Our Offerings</span>
+      <h1 style="font-size:2.5rem; font-weight:900;">Appliance Services Directory</h1>
+      <p style="color:var(--text-secondary); max-width:600px; font-size:0.95rem;">We diagnose and repair 15+ different domestic home utilities and commercial kitchen setups across Lalitpur and Kathmandu. Browse or search below.</p>
+    </div>
+  </section>
+
+  <!-- Services Interactive Catalog Search -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      
+      <!-- Search and Filter Panel -->
+      <div class="search-box-wrapper">
+        <div class="search-input-field">
+          <i data-lucide="search"></i>
+          <input type="text" id="service-search" placeholder="Search appliance repair (e.g. AC, Oven, Washing...)">
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="All Services">All Services</button>
+          <button class="filter-tab" data-filter="Home Service">Home Service</button>
+          <button class="filter-tab" data-filter="Commercial Service">Commercial Service</button>
+        </div>
+      </div>
+
+      <!-- Services Grid (Contains all 15 services) -->
+      <div class="grid grid-3" id="services-grid">
+        
+        <!-- 1. AC Repair -->
+        <div class="glass-card service-card" data-category="Home Service" style="position:relative;">
+          <span class="card-category">Home Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="wind"></i>
+          </div>
+          <h3 class="card-title">Air Conditioner Repair</h3>
+          <p class="card-desc">Comprehensive cooling solutions including chemical wash, inverter troubleshooting, refrigerant leak plugging, and compressor fixes.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> Gas Refilling & Pressure checks</li>
+            <li><i data-lucide="check-circle"></i> PCB Debugging & fan motor repair</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 1,500</p>
+            </div>
+            <a href="book.html?service=Air%20Conditioner%20Repair" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 2. Refrigerator Repair -->
+        <div class="glass-card service-card" data-category="Home Service" style="position:relative;">
+          <span class="card-category">Home Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="snowflake"></i>
+          </div>
+          <h3 class="card-title">Refrigerator Repair</h3>
+          <p class="card-desc">Reliable diagnostics for single-door, double-door, and smart side-by-side refrigerators. Thermostat, gasket, and gas charge fixes.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> Digital Inverter compressor service</li>
+            <li><i data-lucide="check-circle"></i> Defrost timer & heater replacement</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 1,200</p>
+            </div>
+            <a href="book.html?service=Refrigerator%20Repair" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 3. Deep Freezer Repair -->
+        <div class="glass-card service-card" data-category="Commercial Service" style="position:relative;">
+          <span class="card-category">Commercial Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="snowflake"></i>
+          </div>
+          <h3 class="card-title">Deep Freezer Repair</h3>
+          <p class="card-desc">Specialized servicing for commercial display chillers, ice cream chest freezers, and storage boxes. Keep temperature thresholds stable.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> Fan motor replacement</li>
+            <li><i data-lucide="check-circle"></i> Thermostatic controller settings</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 2,000</p>
+            </div>
+            <a href="book.html?service=Deep%20Freezer%20Repair" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 4. Microwave Oven Repair -->
+        <div class="glass-card service-card" data-category="Home Service" style="position:relative;">
+          <span class="card-category">Home Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="flame"></i>
+          </div>
+          <h3 class="card-title">Microwave Oven Repair</h3>
+          <p class="card-desc">Fixing convection, grill, and solo microwaves. We resolve issues like no heating, touchpad errors, turntable motor faults, and sparking.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> Magnetron & high-voltage diode replacement</li>
+            <li><i data-lucide="check-circle"></i> Touch panel circuit calibration</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 800</p>
+            </div>
+            <a href="book.html?service=Microwave%20Oven%20Repair" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 5. Washing Machine Repair -->
+        <div class="glass-card service-card" data-category="Home Service" style="position:relative;">
+          <span class="card-category">Home Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="settings"></i>
+          </div>
+          <h3 class="card-title">Washing Machine Repair</h3>
+          <p class="card-desc">Resolving bearing noise, vibration dampers, door lock release bugs, and drain valve clogging on front-load and top-load brands.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> Drum bearing assembly refit</li>
+            <li><i data-lucide="check-circle"></i> Drain pump & motherboard reprogramming</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 1,000</p>
+            </div>
+            <a href="book.html?service=Washing%20Machine%20Repair" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 6. Water Purifier Repair -->
+        <div class="glass-card service-card" data-category="Home Service" style="position:relative;">
+          <span class="card-category">Home Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="droplet"></i>
+          </div>
+          <h3 class="card-title">Water Purifier Repair</h3>
+          <p class="card-desc">RO membrane replacement, pre-filter cartridges, UV indicator fixes, booster pumps, and mineral cartridge calibration.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> TDS level calibration checks</li>
+            <li><i data-lucide="check-circle"></i> Multi-stage cartridge filter replacements</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 800</p>
+            </div>
+            <a href="book.html?service=Water%20Purifier%20Repair" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 7. Vacuum Cleaner Repair -->
+        <div class="glass-card service-card" data-category="Home Service" style="position:relative;">
+          <span class="card-category">Home Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="settings"></i>
+          </div>
+          <h3 class="card-title">Vacuum Cleaner Repair</h3>
+          <p class="card-desc">Motor brush replacements, speed switch debugging, suction blockage clearances, and cord retraction reel repairs.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> Motor brush cleaning & carbon replacement</li>
+            <li><i data-lucide="check-circle"></i> HEPA filter restoration</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 500</p>
+            </div>
+            <a href="book.html?service=Vacuum%20Cleaner%20Repair" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 8. Electric Geyser Repair -->
+        <div class="glass-card service-card" data-category="Home Service" style="position:relative;">
+          <span class="card-category">Home Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="thermometer"></i>
+          </div>
+          <h3 class="card-title">Electric Geyser Repair</h3>
+          <p class="card-desc">Safety element replacements, thermostat calibrations, pressure-release safety valve checking, and tank leakage plugging.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> Heavy-duty copper element swaps</li>
+            <li><i data-lucide="check-circle"></i> Safety cutout switches test</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 1,000</p>
+            </div>
+            <a href="book.html?service=Electric%20Geyser%20Repair" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 9. Commercial Bakery Oven Repair -->
+        <div class="glass-card service-card" data-category="Commercial Service" style="position:relative;">
+          <span class="card-category">Commercial Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="concierge-bell"></i>
+          </div>
+          <h3 class="card-title">Commercial Bakery Oven Repair</h3>
+          <p class="card-desc">Urgent restoration for bakery deck ovens, rotary ovens, proofers. Replacing high-temp coils and thermocouple sensors.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> High-temp sensor calibration</li>
+            <li><i data-lucide="check-circle"></i> Safety gas combustion checks</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 5,000</p>
+            </div>
+            <a href="book.html?service=Commercial%20Bakery%20Oven%20Repair" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 10. Kitchen Equipment Repair -->
+        <div class="glass-card service-card" data-category="Commercial Service" style="position:relative;">
+          <span class="card-category">Commercial Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="utensils"></i>
+          </div>
+          <h3 class="card-title">Kitchen Equipment Repair</h3>
+          <p class="card-desc">Maintenance of commercial deep fryers, gas griddles, warm food cases, hotel mixers, and high-load induction hobs.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> Thermostatic gas valves repair</li>
+            <li><i data-lucide="check-circle"></i> Heavy motor gearbox swaps</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 3,000</p>
+            </div>
+            <a href="book.html?service=Kitchen%20Equipment%20Repair" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 11. Electronic Appliance Installation -->
+        <div class="glass-card service-card" data-category="All Services" style="position:relative;">
+          <span class="card-category">All Services</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="wrench"></i>
+          </div>
+          <h3 class="card-title">Electronic Appliance Installation</h3>
+          <p class="card-desc">Secure leveling, wall mounting for heavy TVs, taps coupling for washers, split AC mount with copper pipe flares.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> Split AC bracket & stand mount</li>
+            <li><i data-lucide="check-circle"></i> Grounding and leakage switch checks</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 1,000</p>
+            </div>
+            <a href="book.html?service=Electronic%2520Appliance%2520Installation" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 12. Maintenance Service -->
+        <div class="glass-card service-card" data-category="All Services" style="position:relative;">
+          <span class="card-category">All Services</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <h3 class="card-title">Maintenance Service</h3>
+          <p class="card-desc">Preventative servicing to clean dust blockages, check voltages, lubricate bearings, and ensure long term system health.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> Voltage fluctuation test</li>
+            <li><i data-lucide="check-circle"></i> System cleaning & lubrications</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 800</p>
+            </div>
+            <a href="book.html?service=Maintenance%20Service" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 13. Emergency Repair -->
+        <div class="glass-card service-card" data-category="All Services" style="position:relative;">
+          <span class="card-category">All Services</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="alert-circle"></i>
+          </div>
+          <h3 class="card-title">Emergency Repair</h3>
+          <p class="card-desc">Fast same-day response within 2 hours. Priority inspections when cooling fail or display cases go off during operations.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> 2-Hour rapid response in Lalitpur</li>
+            <li><i data-lucide="check-circle"></i> Instant parts diagnosis on-site</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 2,000</p>
+            </div>
+            <a href="book.html?service=Emergency%20Repair" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 14. AMC -->
+        <div class="glass-card service-card" data-category="Commercial Service" style="position:relative;">
+          <span class="card-category">Commercial Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="file-text"></i>
+          </div>
+          <h3 class="card-title">Annual Maintenance Contract (AMC)</h3>
+          <p class="card-desc">Year-round commercial maintenance contract including 4 scheduled checkups, unlimited breakdowns calls, zero service fees.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> Corporate office & restaurant coverage</li>
+            <li><i data-lucide="check-circle"></i> Priority support within 4 hours</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Starting from</span>
+              <p>Rs. 10,000 /yr</p>
+            </div>
+            <a href="book.html?service=AMC" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+        <!-- 15. Home Service -->
+        <div class="glass-card service-card" data-category="Home Service" style="position:relative;">
+          <span class="card-category">Home Service</span>
+          <div class="service-icon-wrapper">
+            <i data-lucide="home"></i>
+          </div>
+          <h3 class="card-title">Home Service Available</h3>
+          <p class="card-desc">Our technicians arrive fully equipped at your doorstep in Lalitpur and Kathmandu. Over 90% of repairs completed on-site.</p>
+          <ul class="card-bullets">
+            <li><i data-lucide="check-circle"></i> On-site clean-up post repair</li>
+            <li><i data-lucide="check-circle"></i> Certified, police-verified technicians</li>
+          </ul>
+          <div class="card-footer">
+            <div class="price-box">
+              <span>Visitation Diagnostic Fee</span>
+              <p>Rs. 500</p>
+            </div>
+            <a href="book.html?service=Home%20Service%20Available" class="btn btn-outline btn-sm">Book</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- No Results Feedback block -->
+      <div id="no-results" style="display:none; text-align:center; padding:60px 20px; max-width:500px; margin:40px auto 0 auto;" class="glass-card">
+        <i data-lucide="alert-triangle" style="width:48px; height:48px; color:var(--text-muted); margin-bottom:16px;"></i>
+        <h3 style="margin-bottom:8px;">No Services Found</h3>
+        <p style="font-size:0.875rem; color:var(--text-muted);">We couldn't find any appliance service matching your search term. Please try another query or contact our hotline directly.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-column">
+          <a href="index.html" class="logo footer-logo">
+            <div class="logo-icon" style="background-color:#FFFFFF; color:#0F172A;">
+              <i data-lucide="wrench"></i>
+            </div>
+            <div class="logo-text">
+              <h2 style="color:#FFF;">S.K. <span style="background-color:rgba(255,255,255,0.1); color:#FFF;">Electronics</span></h2>
+              <p style="color:#64748B;">Repairing Centre</p>
+            </div>
+          </a>
+          <p class="footer-about">
+            Lalitpur's premier home appliance and commercial kitchen repair center. Over 10 years of trusted experience restoring comfort to your home and efficiency to your business.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services Directory</a></li>
+            <li><a href="gallery.html">Our Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact Support</h3>
+          <ul class="footer-contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+              <span>Kupondol Road,<br>Lalitpur 44700, Nepal</span>
+            </li>
+            <li>
+              <i data-lucide="phone"></i>
+              <div>
+                <a href="tel:9840705717" style="display:block; color:#FFF;">9840705717</a>
+                <a href="tel:9818597197" style="display:block; color:#FFF;">9818597197</a>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="mail"></i>
+              <a href="mailto:info@skelectronicsnepal.com">info@skelectronicsnepal.com</a>
+            </li>
+            <li>
+              <i data-lucide="clock"></i>
+              <span>Open: 8:00 AM - 8:00 PM<br>(Sunday - Saturday)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Our Location</h3>
+          <div class="footer-map-frame">
+            <iframe
+              title="Google Map location coordinates of Kupondole, Lalitpur"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.242784534726!2d85.3129525!3d27.6788874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1828cdbcaf63%3A0xc39cb4526d1af6f8!2sKupondole%2C%20Lalitpur!5e0!3m2!1sen!2snp!4v1719830000000!5m2!1sen!2snp"
+              width="100%"
+              height="100%"
+              style="border: 0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 S.K. Electronics & Repairing Centre. All Rights Reserved.</p>
+        <p>Developed & Maintained in Lalitpur, Nepal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTAs -->
+  <div class="floating-ctas">
+    <a href="tel:9840705717" class="floating-btn floating-call" aria-label="Call Direct Desk">
+      <i data-lucide="phone"></i>
+    </a>
+    <a href="https://wa.me/9840705717?text=Hi,%20I%20would%20like%20to%20book%20a%20repair%20service." target="_blank" rel="noopener noreferrer" class="floating-btn floating-whatsapp" aria-label="WhatsApp Support Chat">
+      <i data-lucide="message-square"></i>
+    </a>
+  </div>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Scroll to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <div id="offline-badge" class="offline-badge">
+    You are currently offline. Running on cached resources.
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

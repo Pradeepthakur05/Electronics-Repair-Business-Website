@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | S.K. Electronics & Repairing Centre Lalitpur</title>
+  
+  <meta name="description" content="Get in touch with S.K. Electronics & Repairing Centre in Kupondol, Lalitpur, Nepal. Call us, chat on WhatsApp, email, or find us on Google Maps.">
+  <link rel="canonical" href="https://skelectronicsnepal.com/contact.html">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#D62828">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar">
+    <div id="scroll-indicator" class="scroll-progress-indicator"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header id="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <i data-lucide="wrench"></i>
+        </div>
+        <div class="logo-text">
+          <h2>S.K. <span>Electronics</span></h2>
+          <p>Repairing Centre</p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        
+        <!-- Services with Mega Menu -->
+        <div class="dropdown-parent">
+          <a href="services.html" class="nav-link" style="display:flex; align-items:center; gap:4px;">
+            Services <i data-lucide="chevron-down" style="width:14px; height:14px;"></i>
+          </a>
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h4>Home Appliances</h4>
+              <ul class="mega-list">
+                <li><a href="services.html?service=Air%20Conditioner%20Repair">AC Repair & Refill</a></li>
+                <li><a href="services.html?service=Refrigerator%20Repair">Refrigerator Fixes</a></li>
+                <li><a href="services.html?service=Washing%20Machine%20Repair">Washing Machines</a></li>
+                <li><a href="services.html?service=Microwave%20Oven%20Repair">Microwave Ovens</a></li>
+              </ul>
+            </div>
+            <div class="mega-column mega-column-secondary">
+              <h4>Commercial Kitchen</h4>
+              <ul class="mega-list">
+                <li><a href="services.html?service=Commercial%20Bakery%20Oven%20Repair">Bakery Deck Ovens</a></li>
+                <li><a href="services.html?service=Kitchen%20Equipment%20Repair">Commercial Fryers & Mixers</a></li>
+                <li><a href="services.html?service=Deep%20Freezer%20Repair">Deep Freezers & Chillers</a></li>
+                <li><a href="services.html?service=AMC">Annual Maintenance (AMC)</a></li>
+              </ul>
+            </div>
+            <div class="mega-promo">
+              <div>
+                <h5><i data-lucide="shield-check" style="color:var(--primary);"></i> Premium Service</h5>
+                <p>All repair works are backed by a standard 90 days service and parts replacement warranty.</p>
+              </div>
+              <a href="services.html" class="btn btn-primary btn-sm" style="margin-top:12px;">View All Services</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+        <a href="book.html" class="btn btn-primary" style="display:none; @media(min-width: 768px){display:inline-flex;}">Book Repair</a>
+        <button id="hamburger" class="hamburger" aria-label="Open Navigation Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav" class="mobile-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services Directory</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="contact.html" class="nav-link active">Contact Us</a>
+      <a href="book.html" class="btn btn-primary" style="width:100%; text-align:center;">Book Repair Appointment</a>
+    </div>
+  </header>
+
+  <!-- Banner Header -->
+  <section class="section section-bg" style="padding-top:120px; padding-bottom:50px;">
+    <div class="container" style="text-align:center; display:flex; flex-direction:column; align-items:center; gap:12px;">
+      <span class="section-tag">Get in Touch</span>
+      <h1 style="font-size:2.5rem; font-weight:900;">Contact Our Service Desk</h1>
+      <p style="color:var(--text-secondary); max-width:600px; font-size:0.95rem;">Have questions about repair quotes, corporate AMCs, or parts availability? Reach out through form or direct hotlines.</p>
+    </div>
+  </section>
+
+  <!-- Grid: Form & Info tiles -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:flex-start; gap:50px;">
+        
+        <!-- Form card -->
+        <div class="glass-card form-card" style="width:100%; margin:0;">
+          <h2 style="font-size:1.35rem; font-weight:800; margin-bottom:24px;">Send us a Message</h2>
+          <form id="booking-form" novalidate>
+            
+            <div class="form-group">
+              <label for="booking-name" class="form-label">Full Name <span>*</span></label>
+              <div class="form-control-wrap">
+                <i data-lucide="user" style="width:16px; height:16px;"></i>
+                <input type="text" id="booking-name" class="form-control" placeholder="Ramesh Shrestha">
+                <div class="form-error">Name must be at least 3 characters.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="booking-phone" class="form-label">Mobile Number <span>*</span></label>
+              <div class="form-control-wrap">
+                <i data-lucide="phone" style="width:16px; height:16px;"></i>
+                <input type="tel" id="booking-phone" class="form-control" placeholder="9840705717">
+                <div class="form-error">Enter a valid 10-digit Nepalese mobile number (starts with 97/98).</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="booking-address" class="form-label">Service Location / Address <span>*</span></label>
+              <div class="form-control-wrap">
+                <i data-lucide="map-pin" style="width:16px; height:16px;"></i>
+                <input type="text" id="booking-address" class="form-control" placeholder="Kupondol, Lalitpur (Near Himalayan Bank)">
+                <div class="form-error">Address must be at least 5 characters.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="booking-service" class="form-label">Select Repair Service <span>*</span></label>
+              <div class="form-control-wrap">
+                <i data-lucide="settings" style="width:16px; height:16px;"></i>
+                <select id="booking-service" class="form-control">
+                  <option value="">Choose an appliance service...</option>
+                  <option value="Air Conditioner Repair">Air Conditioner Repair</option>
+                  <option value="Refrigerator Repair">Refrigerator Repair</option>
+                  <option value="Deep Freezer Repair">Deep Freezer Repair</option>
+                  <option value="Microwave Oven Repair">Microwave Oven Repair</option>
+                  <option value="Washing Machine Repair">Washing Machine Repair</option>
+                  <option value="Water Purifier Repair">Water Purifier Repair</option>
+                  <option value="Vacuum Cleaner Repair">Vacuum Cleaner Repair</option>
+                  <option value="Electric Geyser Repair">Electric Geyser Repair</option>
+                  <option value="Commercial Bakery Oven Repair">Commercial Bakery Oven Repair</option>
+                  <option value="Kitchen Equipment Repair">Kitchen Equipment Repair</option>
+                  <option value="Electronic Appliance Installation">Electronic Appliance Installation</option>
+                  <option value="Maintenance Service">Maintenance Service</option>
+                  <option value="Emergency Repair">Emergency Repair</option>
+                  <option value="AMC">Annual Maintenance Contract (AMC)</option>
+                  <option value="Home Service Available">Home Service Available</option>
+                </select>
+                <div class="form-error">Please select a service from the options.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="booking-message" class="form-label">Describe Appliance Issue (Optional)</label>
+              <div class="form-control-wrap">
+                <i data-lucide="message-square" style="width:16px; height:16px; top:16px;"></i>
+                <textarea id="booking-message" class="form-control" placeholder="My AC turns on but doesn't blow cold air, makes clicking noise..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; height:48px;">Send Inquiry Message</button>
+          </form>
+        </div>
+
+        <!-- Info Grid -->
+        <div class="grid grid-2" style="gap:20px; width:100%;">
+          
+          <!-- Tile 1 -->
+          <div class="glass-card" style="padding:20px; height:180px; display:flex; flex-direction:column; justify-content:space-between; hover:transform:none; box-shadow:none;">
+            <div>
+              <div class="logo-icon" style="background-color:rgba(var(--primary-rgb),0.1); color:var(--primary); padding:8px; border-radius:8px; width:36px; height:36px; margin-bottom:12px;">
+                <i data-lucide="phone"></i>
+              </div>
+              <h3 style="font-size:0.9rem; margin-bottom:4px;">Phone Support</h3>
+              <p style="font-size:0.75rem; color:var(--text-secondary);">9840705717</p>
+              <p style="font-size:0.75rem; color:var(--text-secondary);">9818597197</p>
+            </div>
+            <a href="tel:9840705717" style="font-size:0.75rem; font-weight:700; color:var(--primary);">Call Now →</a>
+          </div>
+
+          <!-- Tile 2 -->
+          <div class="glass-card" style="padding:20px; height:180px; display:flex; flex-direction:column; justify-content:space-between; hover:transform:none; box-shadow:none;">
+            <div>
+              <div class="logo-icon" style="background-color:rgba(var(--primary-rgb),0.1); color:var(--primary); padding:8px; border-radius:8px; width:36px; height:36px; margin-bottom:12px;">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <h3 style="font-size:0.9rem; margin-bottom:4px;">Our Workshop</h3>
+              <p style="font-size:0.75rem; color:var(--text-secondary);">Kupondol Road, Lalitpur</p>
+              <p style="font-size:0.75rem; color:var(--text-secondary);">Kathmandu Valley, Nepal</p>
+            </div>
+            <a href="https://maps.google.com/?q=Kupondol,Lalitpur" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem; font-weight:700; color:var(--primary);">Open in Maps →</a>
+          </div>
+
+          <!-- Tile 3 -->
+          <div class="glass-card" style="padding:20px; height:180px; display:flex; flex-direction:column; justify-content:space-between; hover:transform:none; box-shadow:none;">
+            <div>
+              <div class="logo-icon" style="background-color:rgba(var(--primary-rgb),0.1); color:var(--primary); padding:8px; border-radius:8px; width:36px; height:36px; margin-bottom:12px;">
+                <i data-lucide="mail"></i>
+              </div>
+              <h3 style="font-size:0.9rem; margin-bottom:4px;">Email Queries</h3>
+              <p style="font-size:0.75rem; color:var(--text-secondary);">info@skelectronicsnepal.com</p>
+            </div>
+            <a href="mailto:info@skelectronicsnepal.com" style="font-size:0.75rem; font-weight:700; color:var(--primary);">Email Us →</a>
+          </div>
+
+          <!-- Tile 4 -->
+          <div class="glass-card" style="padding:20px; height:180px; display:flex; flex-direction:column; justify-content:space-between; hover:transform:none; box-shadow:none;">
+            <div>
+              <div class="logo-icon" style="background-color:rgba(var(--primary-rgb),0.1); color:var(--primary); padding:8px; border-radius:8px; width:36px; height:36px; margin-bottom:12px;">
+                <i data-lucide="clock"></i>
+              </div>
+              <h3 style="font-size:0.9rem; margin-bottom:4px;">Working Hours</h3>
+              <p style="font-size:0.75rem; color:var(--text-secondary);">Everyday: 8:00 AM - 8:00 PM</p>
+              <p style="font-size:0.75rem; color:var(--text-secondary);">Holiday Service Available</p>
+            </div>
+            <a href="https://wa.me/9840705717" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem; font-weight:700; color:var(--primary);">WhatsApp Chat →</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Maps Embed -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px; color:var(--text-secondary); font-size:0.9rem; font-weight:700;">
+        <i data-lucide="compass" style="color:var(--primary);"></i> Find Us in Kupondol, Lalitpur
+      </div>
+      <div style="width:100%; height:450px; border-radius:24px; overflow:hidden; border:1px solid var(--border-color); box-shadow:var(--shadow-premium);">
+        <iframe
+          title="Google Map embed location of Kupondole, Lalitpur"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.242784534726!2d85.3129525!3d27.6788874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1828cdbcaf63%3A0xc39cb4526d1af6f8!2sKupondole%2C%20Lalitpur!5e0!3m2!1sen!2snp!4v1719830000000!5m2!1sen!2snp"
+          width="100%"
+          height="100%"
+          style="border: 0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Modal Overlay -->
+  <div id="success-modal-overlay" class="modal-overlay">
+    <div class="success-modal">
+      <div class="success-icon-wrap">
+        <i data-lucide="check" style="stroke-width:3px; width:36px; height:36px;"></i>
+      </div>
+      <h3>Message Sent!</h3>
+      <p>Thank you for contacting S.K. Electronics. Your message has been sent successfully. Our support desk will call you back within 60 minutes to assist you.</p>
+      
+      <div class="booking-ref-card">
+        <div class="ref-row">
+          <span>Inquiry Reference:</span>
+          <strong id="ref-id-val">SKE-2026-4891</strong>
+        </div>
+        <div class="ref-row">
+          <span>Service Specialty:</span>
+          <strong id="ref-service-val">General Repair</strong>
+        </div>
+        <div class="ref-row">
+          <span>Response Estimate:</span>
+          <strong style="color:var(--primary); display:flex; align-items:center; gap:4px;"><i data-lucide="clock" style="width:14px; height:14px;"></i> &lt; 1 Hour</strong>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <a href="tel:9840705717" class="btn btn-outline btn-sm">Call Direct Desk</a>
+        <button id="close-success-modal" class="btn btn-primary btn-sm">Close Message</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-column">
+          <a href="index.html" class="logo footer-logo">
+            <div class="logo-icon" style="background-color:#FFFFFF; color:#0F172A;">
+              <i data-lucide="wrench"></i>
+            </div>
+            <div class="logo-text">
+              <h2 style="color:#FFF;">S.K. <span style="background-color:rgba(255,255,255,0.1); color:#FFF;">Electronics</span></h2>
+              <p style="color:#64748B;">Repairing Centre</p>
+            </div>
+          </a>
+          <p class="footer-about">
+            Lalitpur's premier home appliance and commercial kitchen repair center. Over 10 years of trusted experience restoring comfort to your home and efficiency to your business.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services Directory</a></li>
+            <li><a href="gallery.html">Our Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact Support</h3>
+          <ul class="footer-contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+              <span>Kupondol Road,<br>Lalitpur 44700, Nepal</span>
+            </li>
+            <li>
+              <i data-lucide="phone"></i>
+              <div>
+                <a href="tel:9840705717" style="display:block; color:#FFF;">9840705717</a>
+                <a href="tel:9818597197" style="display:block; color:#FFF;">9818597197</a>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="mail"></i>
+              <a href="mailto:info@skelectronicsnepal.com">info@skelectronicsnepal.com</a>
+            </li>
+            <li>
+              <i data-lucide="clock"></i>
+              <span>Open: 8:00 AM - 8:00 PM<br>(Sunday - Saturday)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Our Location</h3>
+          <div class="footer-map-frame">
+            <iframe
+              title="Google Map location coordinates of Kupondole, Lalitpur"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.242784534726!2d85.3129525!3d27.6788874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1828cdbcaf63%3A0xc39cb4526d1af6f8!2sKupondole%2C%20Lalitpur!5e0!3m2!1sen!2snp!4v1719830000000!5m2!1sen!2snp"
+              width="100%"
+              height="100%"
+              style="border: 0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 S.K. Electronics & Repairing Centre. All Rights Reserved.</p>
+        <p>Developed & Maintained in Lalitpur, Nepal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTAs -->
+  <div class="floating-ctas">
+    <a href="tel:9840705717" class="floating-btn floating-call" aria-label="Call Direct Desk">
+      <i data-lucide="phone"></i>
+    </a>
+    <a href="https://wa.me/9840705717?text=Hi,%20I%20would%20like%20to%20book%20a%20repair%20service." target="_blank" rel="noopener noreferrer" class="floating-btn floating-whatsapp" aria-label="WhatsApp Support Chat">
+      <i data-lucide="message-square"></i>
+    </a>
+  </div>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Scroll to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <div id="offline-badge" class="offline-badge">
+    You are currently offline. Running on cached resources.
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

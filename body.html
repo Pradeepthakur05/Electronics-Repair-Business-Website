@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Page Not Found | S.K. Electronics & Repairing Centre</title>
+  
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#D62828">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 404 Content Area -->
+  <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; position: relative; overflow: hidden; background-color: var(--bg-secondary);">
+    
+    <!-- Background glowing circle -->
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 350px; height: 350px; background-color: rgba(var(--primary-rgb), 0.05); border-radius: 50%; filter: blur(100px); pointer-events: none;"></div>
+
+    <div class="glass-card" style="max-width: 480px; width: 100%; text-align: center; padding: 40px 30px; display: flex; flex-direction: column; gap: 24px; position: relative; z-index: 10;">
+      
+      <!-- Broken Wrench block -->
+      <div class="animate-float" style="position: relative; width: 80px; height: 80px; background-color: rgba(var(--primary-rgb), 0.1); color: var(--primary); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+        <i data-lucide="wrench" style="width: 38px; height: 38px; transform: rotate(-45deg);"></i>
+        <div style="position: absolute; top: -6px; right: -6px; background-color: var(--secondary); color: #0F172A; padding: 4px; border-radius: 50%; display: flex; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+          <i data-lucide="alert-triangle" style="width: 14px; height: 14px; stroke-width: 3px;"></i>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-family: monospace; font-size: 0.8rem; font-weight: 700; color: var(--primary); letter-spacing: 2px; text-transform: uppercase;">Error 404</span>
+        <h1 style="font-size: 2rem; font-weight: 900;">Page Not Found</h1>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; max-width: 360px; margin: 0 auto;">The page you are looking for does not exist, has been removed, or is temporarily unavailable.</p>
+      </div>
+
+      <!-- Actions -->
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-primary">
+          <i data-lucide="home"></i> Go to Homepage
+        </a>
+        <a href="book.html" class="btn btn-outline" style="background-color: var(--bg-primary);">
+          <i data-lucide="calendar"></i> Book Repair
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
