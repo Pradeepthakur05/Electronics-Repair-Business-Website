@@ -5,4 +5,4 @@ A modern, responsive, and SEO-friendly business website built for S.K. Electroni
 A modern, responsive electronics repair service website built with Next.js 15, React, TypeScript, Tailwind CSS, and Framer Motion.
 
  Live Demo
- https://skelectronicsrepair.netlify.app/
+ https://skelectronicrepair.netlify.app/
